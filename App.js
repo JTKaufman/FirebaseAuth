@@ -1,4 +1,4 @@
-import { ActivityIndicator, StyleSheet, } from 'react-native';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import React, { useState, useEffect } from "react";
 import Navigation from './Navigation';
 import auth from '@react-native-firebase/auth';
@@ -23,18 +23,29 @@ export default function App() {
     return subscriber; 
   }, []);
 
-  if (initializing) return <ActivityIndicator/>
+  if (initializing) return (
+  <View style={styles.container}>
+    <ActivityIndicator/>
+    <p>test</p>
+  </View>
+  );
 
   return (
-    <Navigation isLoggedIn={isLoggedIn} />
+    <View style={styles.container}>
+    <ActivityIndicator/>
+    <p>test</p>
+  </View>
+    // <Navigation isLoggedIn={isLoggedIn} />
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
   },
+  horizontal: {
+    flexDirection: "row",
+    justifyContent: "center",
+  }
 });
