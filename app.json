@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "FirebaseAuth",
-    "slug": "FirebaseAuth",
+    "slug": "firebase-template",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -31,10 +31,16 @@
     },
     "plugins": [
       "@react-native-firebase/app",
-      "expo-build-properties",
+      "expo-build-properties"
     ],
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "491cd48f-c2d3-4a80-b8dc-1aef982dff35"
+      }
+    },
+    "owner": "jtkaufman"
   }
 }
