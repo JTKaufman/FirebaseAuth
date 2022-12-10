@@ -1,4 +1,4 @@
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, View, Text } from 'react-native';
 import React, { useState, useEffect } from "react";
 import Navigation from './Navigation';
 import auth from '@react-native-firebase/auth';
@@ -26,16 +26,15 @@ export default function App() {
   if (initializing) return (
   <View style={styles.container}>
     <ActivityIndicator/>
-    <p>test</p>
   </View>
   );
 
   return (
-    <View style={styles.container}>
-    <ActivityIndicator/>
-    <p>test</p>
-  </View>
-    // <Navigation isLoggedIn={isLoggedIn} />
+  //   <View style={styles.container}>
+  //   <ActivityIndicator/>
+  //   <Text>test2</Text>
+  // </View>
+    <Navigation isLoggedIn={isLoggedIn} />
   );
 }
 
